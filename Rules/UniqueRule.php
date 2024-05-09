@@ -32,7 +32,7 @@ class UniqueRule implements Rule
      *
      * @param  mixed  $value
      */
-    public function passes(string $attribute, $value): bool
+    public function passes($attribute, $value)
     {
         $explodeAttributes = explode('.', $attribute);
 
@@ -45,7 +45,7 @@ class UniqueRule implements Rule
 
         $items = $items->first();
 
-        return ! $items;
+        return !$items;
     }
 
     /**
